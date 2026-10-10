@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-10",
+  "scope": "Community Markdown documentation, not native app or website runtime validation",
+  "files": [
+    "README.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "docs/README.md",
+    "docs/GETTING_STARTED.md",
+    "docs/CONNECTIONS.md",
+    "docs/ARCHITECTURE.md",
+    "docs/TROUBLESHOOTING.md",
+    "docs/DEVELOPMENT.md",
+    "docs/PLAN.md",
+    "docs/PUBLISHING.md",
+    "docs/SECURITY.md",
+    "docs/ACCEPTANCE.md",
+    "protocol/SPEC.md",
+    "apps/web/README.md"
+  ],
+  "local_links_checked": 135,
+  "heading_anchors_checked": 6,
+  "shell_blocks_syntax_checked": 23,
+  "errors": [],
+  "source_checks": [
+    "Build and test commands compared with scripts and .github/workflows/ci.yml",
+    "UI pairing and hosting labels compared with Mac and client source",
+    "OS targets and website toolchain compared with project configuration",
+    "Release status compared with docs/PLAN.md and recorded acceptance evidence"
+  ],
+  "limits": [
+    "Commands syntax-checked and source-reviewed, not executed as builds in this pass",
+    "External destinations are not covered by the local link check",
+    "No new physical-device, deployment, or release validation"
+  ]
+}

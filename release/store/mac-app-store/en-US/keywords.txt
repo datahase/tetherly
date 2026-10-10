@@ -1,0 +1,1 @@
+remote,desktop,android,keyboard,trackpad,phone,tablet,control

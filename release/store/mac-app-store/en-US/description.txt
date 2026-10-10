@@ -1,0 +1,11 @@
+Tetherly connects your Android phone or tablet to your Mac.
+
+The Mac host stays in your menu bar. Pair a device by comparing a code on both screens, see when it connects, and disconnect or revoke it from the Mac. Your Android device can show the desktop and send pointer and keyboard input.
+
+Requires macOS 14 or later and the separate Tetherly Android controller, running Android 12 or later. Start on the same local network. Remote access requires your own Tailscale setup on both devices. Screen Recording and Accessibility permissions are required on the Mac.
+
+No Tetherly account is required.
+
+Setup: https://www.tetherly.link/setup
+Support: https://www.tetherly.link/support
+Privacy: https://www.tetherly.link/privacy

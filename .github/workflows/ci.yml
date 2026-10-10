@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  protocol:
+    name: Protocol fixtures
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Fixtures match the generator
+        run: |
+          python3 scripts/gen-fixtures.py
+          git diff --exit-code protocol/fixtures
+
+  android:
+    name: Android
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v6
+      - name: Unit tests and debug build
+        run: ./scripts/build-android.sh
+      - name: Optimized APK preserves QR scanner registrations
+        run: |
+          cd apps/android
+          ./gradlew assembleRelease
+          cd ../..
+          ./scripts/check-android-qr-registrars.sh apps/android/app/build/outputs/apk/release/app-release-unsigned.apk
+
+  apple:
+    name: Mac and iOS
+    # Needs Xcode 27 or later (see docs/DEVELOPMENT.md). Hosted runners may not have it yet, so this job runs only
+    # when started by hand (Actions → CI → Run workflow).
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+      - name: Mac tests
+        run: xcodebuild test -project apps/macos/Tetherly.xcodeproj -scheme TetherlyTests -quiet
+      - name: Mac build
+        run: ./scripts/build-macos.sh
+      - name: iOS tests
+        run: |
+          SIM=$(xcrun simctl list devices available | grep -m1 -oE 'iPhone[^(]*\(([0-9A-F-]{36})\)' | grep -oE '[0-9A-F-]{36}')
+          xcodebuild test -project apps/ios/TetherlyiOS.xcodeproj -scheme TetherlyiOSTests -destination "platform=iOS Simulator,id=$SIM" -quiet
+      - name: iOS build
+        run: xcodebuild build -project apps/ios/TetherlyiOS.xcodeproj -scheme TetherlyiOS -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO -quiet
+
+  web:
+    name: Website
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/web
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          package_json_file: apps/web/package.json
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: apps/web/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm build

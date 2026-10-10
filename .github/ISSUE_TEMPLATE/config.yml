@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/datahase/tetherly/security/advisories/new
+    about: Please report security issues privately, not as public issues.
+  - name: Support
+    url: https://tetherly.link/support
+    about: Setup help and frequently asked questions.

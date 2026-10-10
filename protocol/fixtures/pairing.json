@@ -1,0 +1,130 @@
+{
+ "rfc5869": {
+  "ikm": "0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b",
+  "salt": "000102030405060708090a0b0c",
+  "info": "f0f1f2f3f4f5f6f7f8f9",
+  "length": 42,
+  "okm": "3cb25f25faacd57a90434f64d0362f2a2d2d0a90cf1a5a4c5db02d56ecc4c5bf34007208d5b887185865"
+ },
+ "note": "vectors = KDF/SAS arithmetic only; ephC/ephS there are arbitrary bytes, not curve points. ecdh = valid P-256 agreement. invalidPoints = must be rejected.",
+ "vectors": [
+  {
+   "z": "7197a623624a89baacba17fc494895cb38820d70b7dcf8a1cb340b8b23fbf2ce",
+   "pairingId": "d2c0313e3b0ed6dcc218badfc88f32f5",
+   "pinC": "7b9975a217557a688ff230b07848f011573b9ed5261d213c24254221d9e1e1c0",
+   "pinS": "a09a83f17287753aaedaa0abe9dc25c93a8c51414db2b02fa1cfb148559403a7",
+   "cb": "ece6959eb5500088839ca4e6f5d4b9745ef10395bf23a381f992cf35a7491843",
+   "ephC": "04226b4de5649ba172ad9e0adbae195bd120ad7f2ee37d60b532e487f1f38ae304fc32eeb611ad0af2e4d9e0faff3fb2cec924754ee330c5ec43f01048cd495067",
+   "ephS": "04e5ad0884bb3dd17769361f4045f7b33fa870d8fdd97213d2144276eda32b679d5e222def3e3366af0b57a145036ed76994e3fa88c854ca2dd283c8b257bd2575",
+   "commitment": "90e4732f427ea93cbade5aa553146c2817684b2d3b3169dcc4bdaae3728882e4",
+   "sasBytes": "518ebb9534",
+   "k": "2b0dedc2365480af0acf88c6e08063347842fc778d0839484bc27e24507d81f0",
+   "clientMac": "e6dcf6544fac13284bbaab1f462598086ff73102fd0987b51abedd06bd81dd53",
+   "serverMac": "effc6f4bc328e044db4a3e4509daf3f347684f6ce1c72755dacde5fe9df1436e",
+   "sas": [
+    3609,
+    7894,
+    3714
+   ]
+  },
+  {
+   "z": "229462fba445cb1c476fea2ad5fd248ccccdc9f458a8b24ac6b1a7c604ee22a1",
+   "pairingId": "99e6aa4408dfd4b3f65bb30b68443dfe",
+   "pinC": "9bceb41bfafe2e2440960239518c47189093e40f2908e32b408f78199898b541",
+   "pinS": "fda5038510f417cf01aa435cb2a1889d979624a34d5f1b4253889f83f49ee40b",
+   "cb": "7069895e6dd3bca1e031fcc6d1c2e7f9ad12118cf8943b691808a9889270f022",
+   "ephC": "04c4d8f9c34a046d60891f640ad21a90edd9d94517cacb086ec479e7cc643b2020c4074bc888ea915fcd567252c372b4cddea66182adec34ea70ae3c35548472a1",
+   "ephS": "045e35913f4e12b74a6154fd79881520a697d73470742583c9d03c1b63f57396062d6f61b3453ea1a7f9df7a9a86b5d98e785d7b0d129fcf8fabf25109d3f2c324",
+   "commitment": "bd033a10207f911f389a6817a697f3614c0786fa1a16224aa14cbc5154d10d50",
+   "sasBytes": "aac0935d26",
+   "k": "ffc33ba0d799ea4def4ce16def52b08a3456c687d877131b3cf0c5418bc06c50",
+   "clientMac": "1d54cb0ae3d8212f8d40bbc155c1957adb695991716132c2ea79c4f936538264",
+   "serverMac": "b41fe7088967c83c6b7bdda618fc11c2c22332f9e2204314e60991c9309c3fd0",
+   "sas": [
+    6464,
+    1589,
+    4731
+   ]
+  },
+  {
+   "z": "baf4c09f2e2522673eb3e39485de7a1575bb9768696b577cfceafa6ba6c6cce1",
+   "pairingId": "68b5a1f24fa048fb73872ee238425025",
+   "pinC": "ee2d91657147cb33461b19f049dfd0ced57b729df20e22125b5dca882567e54d",
+   "pinS": "32282727a3625393b5fa26aafca2e9590be6c277e3f364dcb3a7e79c8c38065c",
+   "cb": "ba55ad9e1e654127f4ee4ddf89509d5fa8ab7a3a2367c56151d1fdc58381ca4b",
+   "ephC": "0489ab8ee2792b096e5a3751a1fa4bb78f67f5f06797cee0abd9797d22555ba0b4caec5497e88e1f0bcb16ff96b47914442f9ffe4c9331cb4ddd763781ac941fdf",
+   "ephS": "044461866da9fadd8a2b5ca98bc029ac3cfb52bae17bad3f3d871bd9a322a39bab91ba186d345f700aaa682c48afc54e7e6abc292316df0595342eea766faec57a",
+   "commitment": "4008930277cbf89934fd12c15607637fb23c9f7981d1296a46e33fdc1a4e8f8a",
+   "sasBytes": "6a33143185",
+   "k": "7bb03e6127bfed84ecede67d77b7fad22df7d59f6bd9d9314f1c8f3aa92f9184",
+   "clientMac": "6c433d7cd946f4d1f029f89ec9291b80bdfd9398b90596115a143cbb8bac05cc",
+   "serverMac": "4ab19c28289f4b31b08e64e5d06738514618fa6ade4453c4173f1b0a0b65939e",
+   "sas": [
+    4398,
+    4152,
+    7338
+   ]
+  }
+ ],
+ "ecdh": [
+  {
+   "privC": "8f453322fc799bcef5ca8c6e4c2d0e86403c98a634df8e8424ca264fc8d24a21",
+   "privS": "ace2af1f8a2c8fa794b0c5a8bb9f07f29fd08b741e4e98d2e4f1d0ab0e13c8ed",
+   "ephC": "04f8b28c4cb27116d9c1a93549c8542a6329cc7c0e3e0b5f578d79b2bab21d70e4b710068da116e6603ae455142b10639126d66d4cbcb5a17ccd9c0ffaaa0ab49e",
+   "ephS": "04f2a944f6c45559cec889657b34b0ef1d2a1425f6d0efcc4292e677a12203365ea4cc9a3fcba69467ff45d7746627704fa011a4bfd1e64523f89ff5f33a54aeb6",
+   "z": "97ebce15d3ee99df7115855c2139cb292b2bb163a425c005b6a537ecb80c35c4"
+  },
+  {
+   "privC": "542f0a5f93a8f6686cba0b2de0e5195e8ca439df53cb35214a6bb569868068b5",
+   "privS": "3edab1ce9c4eb967db8995e0aae0a15aa7989d023055bbf1353ba8ce7dc7e09c",
+   "ephC": "046aab3f067564598d403cdaec83dd0bd214a9d5e21f8135323edf3d73d336d27b883b345bab9c0d0233b72dbc0d85e0ec1a19b875953874ce0c5b0f4512f396f6",
+   "ephS": "04ab6f1b1100341e95a4bde5a6e1eba0db42d7fc7dea6099792467f08da62b5397879a8f5218281ca46b0d51655a2264a4a3cbd0cec2bf6b3caf29216d491ee497",
+   "z": "023c886175e46c653b8ae671185353efe8c8fc260c2d3e4af16af69ed603e6f1"
+  },
+  {
+   "privC": "32be9f1026998acca4a8de709f99ffe68918f7409e17cd31993ee3ef6cc0d257",
+   "privS": "c3ba554d7d64847dbef22b89c3dd5a79f42e71e1a89876cfc53d954e3570f58d",
+   "ephC": "0473e6c71c7c381094fdc741eb7ef6ce90bf71ad7fbc6cc7389a5ba45c020ebbf3020565491159fed2dce70d4e1e898e5d70ad1033fabb875124e1a5c93596efcc",
+   "ephS": "04f842bc72eac3ab20ea0fb1a1efeb723cd914ca3526a900d9c77e41c25a99e699f6d4847900ad362f75625e6cd082cbb89487bbe74f6555d5f2e0713ec75b3c5b",
+   "z": "dd901a8fd4aaa61e3f7512c1f0b48fa118002418e4a1b30b31961c4ce649e808"
+  }
+ ],
+ "invalidPoints": [
+  {
+   "name": "off curve (y+1)",
+   "hex": "046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f6"
+  },
+  {
+   "name": "wrong prefix 0x05",
+   "hex": "056b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5"
+  },
+  {
+   "name": "compressed form",
+   "hex": "036b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c296"
+  },
+  {
+   "name": "too short",
+   "hex": "046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51"
+  },
+  {
+   "name": "too long",
+   "hex": "046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f500"
+  },
+  {
+   "name": "infinity encoding",
+   "hex": "00"
+  },
+  {
+   "name": "all zero coordinates",
+   "hex": "0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+   "name": "x >= p",
+   "hex": "04ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+  },
+  {
+   "name": "hashed bytes (old fixture style)",
+   "hex": "04226b4de5649ba172ad9e0adbae195bd120ad7f2ee37d60b532e487f1f38ae304fc32eeb611ad0af2e4d9e0faff3fb2cec924754ee330c5ec43f01048cd495067"
+  }
+ ]
+}

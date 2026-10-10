@@ -1,0 +1,26 @@
+{
+  "git": {
+    "requireCleanWorkingDir": true,
+    "commitMessage": "chore: release v${version}",
+    "tagName": "v${version}",
+    "push": false
+  },
+  "npm": {
+    "publish": false
+  },
+  "github": {
+    "release": false
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "conventionalcommits"
+      },
+      "infile": "CHANGELOG.md"
+    }
+  },
+  "hooks": {
+    "before:bump": "node scripts/release-version.mjs --guard ${version}",
+    "after:bump": "node scripts/release-version.mjs --sync"
+  }
+}

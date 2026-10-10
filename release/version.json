@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0",
+  "build": 1,
+  "freezeUntilStoresPublished": true,
+  "stores": {
+    "appStore": false,
+    "googlePlay": false,
+    "macAppStore": false
+  },
+  "notes": [
+    "Initial public release.",
+    "Pair your phone with your Mac and control its desktop.",
+    "Transfer files and clipboard content between paired devices."
+  ]
+}

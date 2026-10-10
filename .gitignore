@@ -1,0 +1,47 @@
+.DS_Store
+# Xcode
+apps/macos/build/
+xcuserdata/
+*.xcuserstate
+# Android / Gradle
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.kotlin/
+.superdev/
+# Local-only material: screenshots from device testing, the original planning prompt, personal signing.
+docs/evidence/
+TETHERLY_PLAN.md
+apps/macos/Signing.local.xcconfig
+apps/ios/build/
+# Web
+node_modules/
+.next/
+.env*
+!.env.example
+.vercel
+
+# Store preparation binaries, sensitive captures, signing keys and verbose local logs
+release/store/artifacts/
+release/store/evidence/*.log
+*.jks
+*.keystore
+
+# Python release tooling
+__pycache__/
+*.pyc
+
+# Local release operations and credentials are not open-source inputs
+release/store/evidence/
+release/store/sources/
+release/store/metadata.json
+release/store/patches/
+apps/web/public/downloads/*.zip
+apps/web/public/downloads/*.dmg
+apps/web/public/downloads/*.apk
+*.p12
+*.p8
+*.mobileprovision
+*.xcarchive/

@@ -1,0 +1,6 @@
+Contact: mailto:security@tetherly.link
+Contact: https://github.com/datahase/tetherly/security/advisories/new
+Expires: 2027-10-10T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://tetherly.link/.well-known/security.txt
+Policy: https://github.com/datahase/tetherly/blob/main/SECURITY.md

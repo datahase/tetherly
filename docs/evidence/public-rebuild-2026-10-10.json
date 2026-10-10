@@ -1,0 +1,50 @@
+{
+  "version": "0.1.0",
+  "build": 1,
+  "distribution_revision": "20261010.6",
+  "native_build_source_commit": "34cca4a51ba8bb53190e1cff04b5113602dc38f0",
+  "native_build_from_clean_main": true,
+  "android_tests": 82,
+  "mac_tests": 33,
+  "ios_simulator_tests": "passed",
+  "web_lint_build": "passed on Node 24.21.0",
+  "downloads": [
+    {
+      "filename": "Tetherly-0.1.0.dmg",
+      "url": "https://assets.tetherly.link/releases/0.1.0/20261010.6/Tetherly-0.1.0.dmg",
+      "sha256": "8213645a7547fbd230be409e8fde3af53f7d7b8f7c293b5873e200441286cfd7",
+      "bytes": 2395120,
+      "http_status": 200
+    },
+    {
+      "filename": "Tetherly-0.1.0.apk",
+      "url": "https://assets.tetherly.link/releases/0.1.0/20261010.6/Tetherly-0.1.0.apk",
+      "sha256": "d4f9a94533204748b06179e660e0f851a2de48f062338ec80b7e54f937b18f1f",
+      "bytes": 3141117,
+      "http_status": 200
+    }
+  ],
+  "mac_notarization": {
+    "macos": {
+      "id": "d9198b6b-6c3f-4969-b942-7c44b66e793a",
+      "message": "Processing complete",
+      "status": "Accepted"
+    },
+    "dmg": {
+      "id": "f5207d4e-1775-488e-a993-a922714f385c",
+      "status": "Accepted",
+      "message": "Processing complete"
+    }
+  },
+  "android_upload_certificate_sha256": "40d062878ed03c8413c0fcf79012b574197ec04f90e7a91399af6ab8c1986f14",
+  "qr_scanner_registrars": 2,
+  "physical_ios_camera": "Deferred by owner",
+  "independent_security_review": "Not performed",
+  "cloudfront_invalidation": {
+    "id": "I1MRSN91FUDZ9XHBMRG77MX0KN",
+    "status": "Completed",
+    "paths": [
+      "/*"
+    ]
+  }
+}

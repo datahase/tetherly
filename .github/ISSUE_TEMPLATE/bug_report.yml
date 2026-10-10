@@ -1,0 +1,48 @@
+name: Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Security problem? Don't file it here. Email security@tetherly.link instead (see SECURITY.md).
+        Never paste pairing codes, QR links, keys, or screenshots that show private content.
+  - type: dropdown
+    id: app
+    attributes:
+      label: Which app?
+      multiple: true
+      options: [Mac host, Android, iOS / iPadOS, Website]
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Tetherly version, macOS version, and phone OS and model.
+      placeholder: Tetherly 1.0.0, macOS 15.4, Android 15 (Pixel 8)
+    validations:
+      required: true
+  - type: dropdown
+    id: network
+    attributes:
+      label: Connection
+      options: [Same Wi-Fi, Tailscale, Not connected yet]
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error messages or logs
+      render: text

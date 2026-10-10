@@ -1,0 +1,13 @@
+Tetherly is an Android controller for the user's own Mac. No Tetherly login is required. Review needs a physical Mac running macOS 14+ and a signed, notarized Tetherly Mac host. The Mac host is available from https://tetherly.link/#download.
+
+1. Download the Mac host from https://tetherly.link/#download, drag it to Applications and open it.
+2. Grant Screen Recording and Accessibility on the Mac, then relaunch if requested.
+3. Put the Android device and Mac on the same Wi-Fi network. Ensure the network allows local discovery and TCP 47800.
+4. On the Mac, choose Pair New Device. On Android, scan the code or choose the Mac nearby.
+5. Compare all code groups on both screens and approve on the Mac.
+6. Open the connected Mac on Android. View the desktop, use direct touch or the trackpad, open Keyboard, and type into a blank test document.
+7. Disconnect from the Mac panel. Reconnect from the paired device. Revoke the device and confirm that a new pairing is needed.
+
+The initial review does not require Tailscale. It is a separate optional installation for the user's own remote network. Do not give reviewers access to a personal computer or reuse personal pairing identities.
+
+Contact: support@tetherly.link
