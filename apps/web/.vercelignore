@@ -1,0 +1,16 @@
+# For projects using this directory as the upload root.
+# The linked monorepo project must be deployed from the repository root.
+/node_modules
+/.next
+/out
+/build
+/coverage
+/.git
+/.vercel
+/.superdev
+.env*
+.DS_Store
+*.log
+*.tsbuildinfo
+/AGENTS.md
+/README.md

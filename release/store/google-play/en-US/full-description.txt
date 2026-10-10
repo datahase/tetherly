@@ -1,0 +1,19 @@
+Keep your Mac within reach with Tetherly, a native remote desktop controller for Android phones and tablets.
+
+See your Mac desktop on your Android device. Move the pointer with a trackpad or direct touch, type with the keyboard, and use familiar Mac shortcut keys.
+
+Start by opening the Tetherly host on your Mac. Connect both devices to the same Wi-Fi network, scan the pairing QR code or choose the Mac nearby, compare the code on both screens, and approve the connection on your Mac.
+
+Your Mac shows when a device is connected. You can disconnect it, turn off hosting, or revoke a paired device from the menu bar panel. Tetherly does not require a Tetherly account.
+
+Requirements
+- Android 12 or later.
+- A Mac running macOS 14 or later, with the Tetherly host installed and running.
+- Screen Recording and Accessibility permissions on the Mac.
+- A shared local network for initial setup. Remote network access requires your own Tailscale setup on both devices.
+
+The Android app is a controller. It needs the separate Mac host and does not provide a hosted computer.
+
+Setup: https://www.tetherly.link/setup
+Support: https://www.tetherly.link/support
+Privacy: https://www.tetherly.link/privacy

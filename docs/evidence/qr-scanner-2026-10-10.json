@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-10",
+  "scope": "Targeted QR scanner crash fix. No publication or replacement of the main signed Android installation.",
+  "diagnosis": {
+    "original_apk_sha256": "64a2c0a04803b71f1b7df0671b4718aa657cbeed2339fb6333a4840916721605",
+    "cause": "R8 removed no-argument constructors of manifest-discovered ML Kit ComponentRegistrar classes. Synchronous scanner initialization then threw a NullPointerException before failure listeners were registered.",
+    "negative_artifact_check": "FAIL: missing VisionCommonRegistrar and CommonComponentRegistrar constructors"
+  },
+  "android": {
+    "test_application_id": "link.tetherly.qrprobe",
+    "test_apk_sha256": "1efbdefc249e19cf8ab82ff19b679bb9194c27bfce9e58126e382b7bab72407b",
+    "minify_enabled": true,
+    "shrink_resources_enabled": false,
+    "signing": "Local debug key, isolated test package",
+    "build": "PASS: optimized release probe built with --max-workers=2 and in-process Kotlin compilation",
+    "unit_tests": {
+      "passed": 82,
+      "failures": 0,
+      "errors": 0
+    },
+    "positive_artifact_check": "PASS: 2 ML Kit registrar constructors retained",
+    "physical_probe": "Installed and launched on Android 14 I2017. UIAutomator dump failed with exit 137; no scanner camera acceptance claimed from that attempt."
+  },
+  "user_reported": {
+    "mobile_qr": "User reported that QR scanning works now. Exact tested artifact and platform were not restated in this confirmation.",
+    "broader_device_tests": "User reported broader device testing had already been completed in another thread; not repeated here."
+  },
+  "ios": {
+    "app_build": "PASS: iOS Simulator app build with -jobs 2, signing disabled",
+    "pairing_tests": {
+      "result": "Passed",
+      "test_functions": 4,
+      "executions": 9,
+      "failures": 0,
+      "device": "iPhone 17e Simulator, iOS 26.5",
+      "coverage": "Existing shared-core checks plus valid pairing identity/routes and six invalid/expired QR cases"
+    },
+    "physical_camera": "Not verified in this checkout",
+    "scanner_changes": "Both QR entry points share explicit camera authorization, availability checks and user-facing errors. Scanning starts after view presentation and stops on dismissal or completion."
+  },
+  "release_handoff": {
+    "owner_checkout": "release worktree",
+    "merge_instruction": "Preserve existing upload signing and resource shrinking configuration. Add proguard-rules.pro to the existing release proguardFiles list, import scanner source fixes and artifact checker, then rebuild with the dedicated upload key.",
+    "final_artifact_check": "Run scripts/check-android-qr-registrars.sh on the final signed APK and perform targeted scanner acceptance against that exact artifact.",
+    "publication": "Not performed"
+  }
+}

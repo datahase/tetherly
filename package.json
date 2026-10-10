@@ -1,0 +1,20 @@
+{
+  "name": "tetherly-release",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "release": "node scripts/run-release.mjs",
+    "release:check": "node scripts/release-version.mjs --check",
+    "release:sync": "node scripts/release-version.mjs --sync"
+  },
+  "devDependencies": {
+    "release-it": "21.1.1",
+    "@release-it/conventional-changelog": "12.0.2"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "overrides": {
+    "basic-ftp": "6.2.3"
+  }
+}

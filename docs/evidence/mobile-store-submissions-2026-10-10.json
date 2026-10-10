@@ -1,0 +1,55 @@
+{
+  "verified_date": "2026-10-10",
+  "version": "0.1.0",
+  "build": 1,
+  "store_name": "Tetherly: Remote Desktop App",
+  "native_build_source_commit": "34cca4a51ba8bb53190e1cff04b5113602dc38f0",
+  "apple": {
+    "app_id": "6821378175",
+    "bundle_id": "link.tetherly.client",
+    "build_id": "4d071694-4389-497c-999d-292fd9123f55",
+    "submission_id": "c9cb5ff9-ce5b-4cc9-8a5d-845752795f90",
+    "status": "Waiting for Review",
+    "submitted_at_local": "2026-10-10 21:37 Asia/Kolkata",
+    "testflight": "Internal group has one build and the owner-selected existing team member invited",
+    "automatic_release_after_approval": true,
+    "screenshots": [
+      "iPhone 6.9 inch",
+      "iPhone 6.3 inch",
+      "iPad 13 inch"
+    ],
+    "privacy": "Data Not Collected, published by owner"
+  },
+  "google": {
+    "package": "link.tetherly",
+    "app_id": "4972057907316919217",
+    "internal_testing": "0.1.0 (1) available; owner-selected tester list enabled",
+    "internal_join_url": "https://play.google.com/apps/internaltest/4701272086472633982",
+    "production_release": "0.1.0 (1)",
+    "production_status": "Your changes are now in review; automatic quick checks completed",
+    "submitted_changes": 11,
+    "targeting": "177 countries/regions plus Rest of World",
+    "managed_publishing": false,
+    "data_safety": "Diagnostics, App interactions, Device or other IDs: collected, required, non-ephemeral, analytics, encrypted in transit, not shared",
+    "content_rating": "Everyone / PEGI 3",
+    "target_audience": "16 and older",
+    "warning": "Native debug symbols not uploaded; ReTrace mapping attached",
+    "app_signing_certificate_sha256": "029ca97eb0f92f53f41d5d8e0cc8d6fafd2b6eaf4c71485e6731295532d87c8e",
+    "upload_certificate_sha256": "40d062878ed03c8413c0fcf79012b574197ec04f90e7a91399af6ab8c1986f14"
+  },
+  "website": {
+    "source_commit": "5507fa9",
+    "deployment_id": "dpl_C8b5xVk87nMKDEWde7jJAMUUcB5b",
+    "status": "READY",
+    "production_url": "https://www.tetherly.link",
+    "node": "24.21.0",
+    "build": "Compilation, TypeScript and static generation passed",
+    "anonymous_http_verification": "Homepage and favicon HTTP 200; final revision 20261010.6 DMG/APK links and blog present"
+  },
+  "limitations": {
+    "store_approval": "Pending external review; neither store publicly available yet",
+    "physical_ios_camera": "Deferred by owner",
+    "independent_security_review": "Not performed",
+    "direct_apk_play_upgrade": "Certificates differ. Switching from the upload-signed website APK to Play requires uninstall/reinstall and pairing again."
+  }
+}

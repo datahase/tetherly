@@ -1,0 +1,29 @@
+# The deployable website is self-contained in apps/web.
+# Keep native apps, protocol fixtures, design sources, and evidence out of uploads.
+/*
+# Vercel's directory walker checks paths without a trailing slash.
+!/apps
+/apps/*
+!/apps/web
+!/LICENSE
+!/NOTICE
+!/vercel.json
+!/.vercelignore
+
+# Generated output, dependencies, and local-only files.
+**/node_modules
+**/.next
+**/out
+**/build
+**/coverage
+**/.git
+**/.vercel
+**/.superdev
+**/.env*
+**/.DS_Store
+**/*.log
+**/*.tsbuildinfo
+
+# Agent instructions and scaffold documentation are not website inputs.
+/apps/web/AGENTS.md
+/apps/web/README.md

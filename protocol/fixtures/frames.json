@@ -1,0 +1,233 @@
+[
+ {
+  "name": "hello control",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "00000047017b2274797065223a2268656c6c6f222c2276657273696f6e73223a5b315d2c226b696e64223a22636f6e74726f6c222c22646576696365223a22546573742070686f6e65227d",
+  "expect": "ok:1"
+ },
+ {
+  "name": "ping",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "00000016017b2274797065223a2270696e67222c226e223a337d",
+  "expect": "ok:1"
+ },
+ {
+  "name": "unicode text",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "00000056017b2274797065223a2274657874222c2274657874223a22685c75303065396c6c6f205c75643833645c7564633462205c75303932385c75303932655c75303933385c75303934645c75303932345c7530393437227d",
+  "expect": "ok:1"
+ },
+ {
+  "name": "zero length",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "00000000",
+  "expect": "malformed"
+ },
+ {
+  "name": "oversized control (checked before allocation)",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "0001000101",
+  "expect": "frame_too_large"
+ },
+ {
+  "name": "max-size length claim on control",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "ffffffff01",
+  "expect": "frame_too_large"
+ },
+ {
+  "name": "video frame type on control",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "0000000b1100000000000000000001",
+  "expect": "unknown_type"
+ },
+ {
+  "name": "unknown frame type",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "000000027f78",
+  "expect": "unknown_type"
+ },
+ {
+  "name": "json not an object",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "00000006015b312c325d",
+  "expect": "malformed"
+ },
+ {
+  "name": "json missing type",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "00000008017b226e223a317d",
+  "expect": "malformed"
+ },
+ {
+  "name": "json type not string",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "0000000b017b2274797065223a357d",
+  "expect": "malformed"
+ },
+ {
+  "name": "invalid utf8",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "0000000d017b2274797065223a22ff227d",
+  "expect": "malformed"
+ },
+ {
+  "name": "truncated json",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "0000000c017b2274797065223a227069",
+  "expect": "malformed"
+ },
+ {
+  "name": "video config",
+  "kind": "video",
+  "dir": "s2c",
+  "hex": "0000000f100780043800046742001f000268ce",
+  "expect": "ok:16"
+ },
+ {
+  "name": "video config bad lengths",
+  "kind": "video",
+  "dir": "s2c",
+  "hex": "00000010100780043800046742001f000268ce00",
+  "expect": "malformed"
+ },
+ {
+  "name": "video config zero width",
+  "kind": "video",
+  "dir": "s2c",
+  "hex": "0000000f100000043800046742001f000268ce",
+  "expect": "malformed"
+ },
+ {
+  "name": "video keyframe",
+  "kind": "video",
+  "dir": "s2c",
+  "hex": "0000001011000000000001e24001000000016588",
+  "expect": "ok:17"
+ },
+ {
+  "name": "video frame empty data",
+  "kind": "video",
+  "dir": "s2c",
+  "hex": "0000000a11000000000000000100",
+  "expect": "malformed"
+ },
+ {
+  "name": "video frame reserved flag",
+  "kind": "video",
+  "dir": "s2c",
+  "hex": "0000000b1100000000000000010201",
+  "expect": "malformed"
+ },
+ {
+  "name": "video frame oversized",
+  "kind": "video",
+  "dir": "s2c",
+  "hex": "0040000111",
+  "expect": "frame_too_large"
+ },
+ {
+  "name": "video frame from client",
+  "kind": "video",
+  "dir": "c2s",
+  "hex": "0000000b1100000000000000010001",
+  "expect": "unknown_type"
+ },
+ {
+  "name": "file chunk",
+  "kind": "file",
+  "dir": "any",
+  "hex": "0000000420616263",
+  "expect": "ok:32"
+ },
+ {
+  "name": "file chunk empty",
+  "kind": "file",
+  "dir": "any",
+  "hex": "0000000120",
+  "expect": "malformed"
+ },
+ {
+  "name": "file chunk oversized",
+  "kind": "file",
+  "dir": "any",
+  "hex": "0004000220",
+  "expect": "frame_too_large"
+ },
+ {
+  "name": "file chunk on control",
+  "kind": "control",
+  "dir": "c2s",
+  "hex": "0000000420616263",
+  "expect": "unknown_type"
+ },
+ {
+  "name": "mac audio",
+  "kind": "audio",
+  "dir": "s2c",
+  "hex": "0000000d3000000000000003e801000200",
+  "expect": "ok:48"
+ },
+ {
+  "name": "former mic audio type",
+  "kind": "audio",
+  "dir": "c2s",
+  "hex": "0000000b3100000000000003e80100",
+  "expect": "unknown_type"
+ },
+ {
+  "name": "mac audio partial frame",
+  "kind": "audio",
+  "dir": "s2c",
+  "hex": "0000000b3000000000000000010100",
+  "expect": "malformed"
+ },
+ {
+  "name": "mac audio empty",
+  "kind": "audio",
+  "dir": "s2c",
+  "hex": "00000009300000000000000001",
+  "expect": "malformed"
+ },
+ {
+  "name": "mac audio oversized",
+  "kind": "audio",
+  "dir": "s2c",
+  "hex": "0000400a30",
+  "expect": "frame_too_large"
+ },
+ {
+  "name": "mac audio from client",
+  "kind": "audio",
+  "dir": "c2s",
+  "hex": "0000000d30000000000000000101000200",
+  "expect": "unknown_type"
+ },
+ {
+  "name": "mic audio from mac",
+  "kind": "audio",
+  "dir": "s2c",
+  "hex": "0000000b3100000000000000010100",
+  "expect": "unknown_type"
+ },
+ {
+  "name": "audio frame on video",
+  "kind": "video",
+  "dir": "s2c",
+  "hex": "0000000d30000000000000000101000200",
+  "expect": "unknown_type"
+ }
+]

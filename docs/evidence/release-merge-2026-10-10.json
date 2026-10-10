@@ -1,0 +1,33 @@
+{
+  "release_commit": "78604a857eb29d2e6fd497dae1a225345b961e78",
+  "main_commit": "cdad13d025feb6b6e9bdbe59b65333fe1489ea1e",
+  "changed_app_paths": [
+    "apps/ios/TetherlyiOSTests/PairLinkTests.swift",
+    "apps/web/README.md"
+  ],
+  "production_build_inputs_unchanged": true,
+  "downloads": [
+    {
+      "url": "https://assets.tetherly.link/releases/0.1.0/20261010.4/Tetherly-0.1.0.dmg",
+      "status": 200,
+      "sha256": "f978fde7cf8bb3ba52c7b725369a8b3b327456ad72d894eaf81a1b054145fd8d",
+      "size": 2394667
+    },
+    {
+      "url": "https://assets.tetherly.link/releases/0.1.0/20261010.4/Tetherly-0.1.0.apk",
+      "status": 200,
+      "sha256": "b2fa833098638738cbc015f7149de7c58a228bea431521a0e1a177a9773b15ba",
+      "size": 3141117
+    }
+  ],
+  "checks": {
+    "version": "0.1.0, increment freeze retained",
+    "upload_guard_tests": 5,
+    "published_apk_mlkit_registrar_constructors": 2,
+    "protocol_fixtures": "generator matches committed fixtures",
+    "website_lint": "passed",
+    "ios_simulator_tests": "passed; includes pairing QR identity/routes and invalid links"
+  },
+  "physical_ios_camera": "Deferred by owner for testing by a friend after release.",
+  "interpretation": "The merged production app sources and build settings match the release inputs. Main adds iOS tests and website documentation. Existing S3 files therefore retain the incorporated T3 runtime fixes; no binary replacement or version change is needed."
+}

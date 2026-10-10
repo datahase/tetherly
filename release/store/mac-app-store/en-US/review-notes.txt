@@ -1,0 +1,9 @@
+ELIGIBILITY HOLD. This is preparation copy, not an App Store submission.
+
+The current host has ENABLE_APP_SANDBOX=NO and uses AXIsProcessTrusted and CGEvent.post(tap: .cghidEventTap) to control other applications. Apple requires App Sandbox for Mac App Store distribution. Apple's sandbox documentation lists assistive accessibility APIs as incompatible functionality. Signing or notarizing this app does not resolve that restriction.
+
+No App Store build has been uploaded, no review has been requested, and no Apple exception is assumed. Do not submit the current host as a sandboxed app, add private entitlements, or install an external helper to bypass the store's requirements.
+
+The Datahase App Store Connect account was verified. Its New App form has no registered link.tetherly.host bundle ID available. A listing would also need an appropriate store distribution certificate/profile (only Apple Development and Developer ID Application signing identities were available locally), App Privacy, age rating, export compliance, review contact details, availability, and EU trader-status review where applicable.
+
+A Developer ID signed universal Release build is prepared for evaluation as a direct-distribution alternative. It is not notarized or approved for public release. Direct distribution or a separately designed sandbox-compatible product requires a route decision.
