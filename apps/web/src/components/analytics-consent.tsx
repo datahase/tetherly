@@ -1,6 +1,6 @@
 "use client";
 
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, sendGAEvent } from "@next/third-parties/google";
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { REGION_COOKIE } from "@/lib/consent";
@@ -45,10 +45,27 @@ export function AnalyticsConsent() {
     return () => window.removeEventListener(OPEN_SETTINGS, open);
   }, []);
 
-  if (!state) return null; // server render and hydration: decide on the client only
-  const [region, choice] = state.split("|");
+  const [region, choice] = (state ?? "|").split("|");
   const optIn = region !== "open";
-  const granted = choice === "granted" || (!optIn && choice !== "denied");
+  const granted = !!state && (choice === "granted" || (!optIn && choice !== "denied"));
+
+  // Counts clicks on links marked data-download="<platform>" as GA4 file_download events.
+  useEffect(() => {
+    if (!granted) return;
+    const onClick = (e: MouseEvent) => {
+      const link = (e.target as Element | null)?.closest<HTMLAnchorElement>("a[data-download]");
+      if (!link) return;
+      sendGAEvent("event", "file_download", {
+        platform: link.dataset.download,
+        file_name: link.pathname.split("/").pop(),
+        link_url: link.href,
+      });
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, [granted]);
+
+  if (!state || !site.googleAnalyticsId) return null; // server render and hydration: decide on the client only
   const showBanner = settingsOpen || (optIn && !choice);
 
   const choose = (next: "granted" | "denied") => {
@@ -95,6 +112,7 @@ export function AnalyticsConsent() {
 }
 
 export function CookieSettingsButton({ className }: { className?: string }) {
+  if (!site.googleAnalyticsId) return null;
   return (
     <button type="button" className={className} onClick={() => window.dispatchEvent(new Event(OPEN_SETTINGS))}>
       Cookie settings

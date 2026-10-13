@@ -63,7 +63,7 @@ export default function SetupPage() {
         <p className="eyebrow">Before either route</p>
         <h2>Give your Mac a moment to get ready.</h2>
         <ul className="preparation-checklist">
-          <li><CheckIcon className="size-4" aria-hidden /><div><h3>Install on both devices.</h3><p><a href={site.downloads.mac} download>Download Tetherly for Mac</a>, open it, and drag Tetherly to Applications. Then open Tetherly from the menu bar. <a href={site.downloads.android}>Download Tetherly for Android</a> and follow the installation prompts. iPhone and iPad releases are coming soon.</p></div></li>
+          <li><CheckIcon className="size-4" aria-hidden /><div><h3>Install on both devices.</h3><p><a href={site.downloads.mac} download data-download="mac">Download Tetherly for Mac</a>, open it, and drag Tetherly to Applications. Then open Tetherly from the menu bar. <a href={site.downloads.android} data-download="android">Download Tetherly for Android</a> and follow the installation prompts. iPhone and iPad releases are coming soon.</p></div></li>
           <li><CheckIcon className="size-4" aria-hidden /><div><h3>Give your Mac permission.</h3><p>Follow the Screen Recording and Accessibility prompts. Allow Local Network access and incoming connections through the macOS firewall. Reopen Tetherly if macOS asks you to.</p></div></li>
           <li><CheckIcon className="size-4" aria-hidden /><div><h3>Let your phone find your Mac.</h3><p>On iPhone or iPad, allow Local Network access. Scanning the QR code also needs camera access.</p></div></li>
         </ul>

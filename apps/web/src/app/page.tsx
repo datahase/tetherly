@@ -136,8 +136,8 @@ export default function Home() {
             <h2 id="download-title">A new way to<br /><span className="editorial">stay within reach.</span></h2>
             <p>Download Tetherly {releaseInfo.version} for Mac and Android. The Mac app supports Apple silicon and Intel Macs running macOS 14 or later. Android requires Android 12 or later. Mobile store releases are coming soon.</p>
             <div className="download-actions">
-              <a href={site.downloads.mac} download className="action-primary">Download for Mac <ArrowDownIcon className="size-4" aria-hidden /></a>
-              <a href={site.downloads.android} className="action-primary">Download for Android <ArrowDownIcon className="size-4" aria-hidden /></a>
+              <a href={site.downloads.mac} download data-download="mac" className="action-primary">Download for Mac <ArrowDownIcon className="size-4" aria-hidden /></a>
+              <a href={site.downloads.android} data-download="android" className="action-primary">Download for Android <ArrowDownIcon className="size-4" aria-hidden /></a>
             </div>
             <div className="store-actions" aria-label="Upcoming store releases">
               <button type="button" className="store-button" disabled aria-label="App Store for iPhone and iPad, coming soon">

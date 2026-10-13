@@ -16,6 +16,7 @@ export const site = {
     support: "support@tetherly.link",
     security: "security@tetherly.link",
   },
-  googleAnalyticsId: "G-V1T0RDJDST",
+  /** Set NEXT_PUBLIC_GA_MEASUREMENT_ID at build time; analytics and the consent banner are off without it. */
+  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "",
   legalEffectiveDate: "10 October 2026",
 } as const;

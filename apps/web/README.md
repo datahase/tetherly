@@ -2,7 +2,9 @@
 
 The public site for [tetherly.link](https://tetherly.link): landing page, Privacy Policy, Terms of Use, Support, and a connection guide.
 Next.js (App Router, TypeScript), Tailwind CSS v4, shadcn/ui (Base UI), `motion` for animation. Every route is
-prerendered as static content; there is no server data, no cookies and no analytics.
+prerendered as static content. Google Analytics loads only when `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set at build
+time (see `.env.example`) and only after consent where the law requires it. Download links carry
+`data-download="<platform>"` and are counted as GA4 `file_download` events.
 
 [Community documentation](../../docs/README.md) · [Contributor guide](../../CONTRIBUTING.md)
 
