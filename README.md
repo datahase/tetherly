@@ -17,7 +17,7 @@ Tetherly brings your existing Mac desktop to Android, iPhone, and iPad. Open an 
 
 No Tetherly account is required. Tetherly has no advertising or account. Android QR scanning uses Google Play services, which collects diagnostics as described in the [privacy policy](https://www.tetherly.link/privacy). Your devices pair with a code you compare on both screens, then connect using mutually authenticated TLS 1.3. Tetherly runs no relay service. For connections across networks, Tailscale is a separate service with its own account and infrastructure.
 
-> **Version 0.1.0.** [Mac and Android downloads](https://www.tetherly.link/#download) are available. iPhone and iPad store releases are coming soon. You can also build from source. Some paths have real-device evidence; others still need acceptance checks. Read the [current status](docs/PLAN.md) and [recorded evidence](docs/ACCEPTANCE.md) before relying on a development build.
+> **Version 0.1.0.** [Mac and Android downloads](https://www.tetherly.link/#download) are available, and Android is on [Google Play](https://play.google.com/store/apps/details?id=link.tetherly). iPhone and iPad store releases are coming soon. You can also build from source. Some paths have real-device evidence; others still need acceptance checks. Read the [current status](docs/PLAN.md) and [recorded evidence](docs/ACCEPTANCE.md) before relying on a development build.
 
 ## What you can do
 

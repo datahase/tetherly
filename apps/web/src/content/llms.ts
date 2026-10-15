@@ -12,7 +12,7 @@ const summary = `# ${site.name}
 Key facts:
 
 - Platforms: a Mac menu bar host app (macOS 14 or later, Apple silicon and Intel); clients for Android 12 or later and iOS/iPadOS 17 or later.
-- Current version: ${releaseInfo.version}. The Mac and Android apps are available as direct downloads; App Store and Google Play releases are coming soon.
+- Current version: ${releaseInfo.version}. The Mac and Android apps are available as direct downloads, and Android is on Google Play (${site.stores.googlePlay}); the App Store release is coming soon.
 - Price: free.
 - Features: live screen view (H.264), touch and trackpad pointer modes, scrolling and zoom, phone keyboard and dictation with Mac modifier keys, fn and F1–F12, a Mission Control button and multi-finger swipes, clipboard send and fetch on request, two-way file transfer with explicit acceptance, Mac audio on the phone.
 - Security: QR pairing with a short code compared on both screens and approved on the Mac, then mutual TLS 1.3 with pinned keys. Keys stay in the Mac Keychain, iOS Keychain or Android Keystore.

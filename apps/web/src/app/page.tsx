@@ -65,7 +65,7 @@ export default function Home() {
             <Link href="#download" className="action-primary">Download for Mac <ArrowDownIcon className="size-4" aria-hidden /></Link>
             <Link href="/setup" className="text-link">How to connect <ArrowRightIcon className="size-4" aria-hidden /></Link>
           </Entrance>
-          <Entrance delay={0.22}><p className="hero-note">For Mac + Android, iPhone, or iPad.<br /><span>Mac and Android downloads available. Mobile store releases coming soon.</span></p></Entrance>
+          <Entrance delay={0.22}><p className="hero-note">For Mac + Android, iPhone, or iPad.<br /><span>Android is on Google Play. iPhone and iPad coming soon.</span></p></Entrance>
         </div>
         <Entrance delay={0.08} className="hero-art">
           <figure>
@@ -134,20 +134,19 @@ export default function Home() {
           <div className="section-heading">
             <p className="eyebrow">Get Tetherly</p>
             <h2 id="download-title">A new way to<br /><span className="editorial">stay within reach.</span></h2>
-            <p>Download Tetherly {releaseInfo.version} for Mac and Android. The Mac app supports Apple silicon and Intel Macs running macOS 14 or later. Android requires Android 12 or later. Mobile store releases are coming soon.</p>
+            <p>Download Tetherly {releaseInfo.version} for Mac and Android. The Mac app supports Apple silicon and Intel Macs running macOS 14 or later. Android requires Android 12 or later and is also on Google Play. The App Store release is coming soon.</p>
             <div className="download-actions">
               <a href={site.downloads.mac} download data-download="mac" className="action-primary">Download for Mac <ArrowDownIcon className="size-4" aria-hidden /></a>
               <a href={site.downloads.android} data-download="android" className="action-primary">Download for Android <ArrowDownIcon className="size-4" aria-hidden /></a>
             </div>
-            <div className="store-actions" aria-label="Upcoming store releases">
+            <div className="store-actions" aria-label="App stores">
               <button type="button" className="store-button" disabled aria-label="App Store for iPhone and iPad, coming soon">
                 <span className="store-badge-frame"><Image src="/store-badges/app-store.svg" width={120} height={40} alt="Download on the App Store" className="app-store-badge" unoptimized /></span>
                 <span className="store-coming-soon">Coming soon</span>
               </button>
-              <button type="button" className="store-button" disabled aria-label="Google Play for Android, coming soon">
+              <a href={site.stores.googlePlay} data-download="google-play" className="store-button">
                 <span className="store-badge-frame"><Image src="/store-badges/google-play.png" width={646} height={250} alt="Get it on Google Play" className="google-play-badge" unoptimized /></span>
-                <span className="store-coming-soon">Coming soon</span>
-              </button>
+              </a>
             </div>
             <Link href="/setup" className="text-link">Installation and pairing <ArrowRightIcon className="size-4" aria-hidden /></Link>
             <p><a href="/downloads/SHA256SUMS.txt" className="text-link">Download checksums</a> · <Link href="/changelog" className="text-link">Changelog</Link></p>

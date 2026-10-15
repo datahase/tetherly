@@ -9,6 +9,9 @@ export const site = {
     mac: "https://assets.tetherly.link/releases/0.1.0/20261010.6/Tetherly-0.1.0.dmg",
     android: "https://assets.tetherly.link/releases/0.1.0/20261010.6/Tetherly-0.1.0.apk",
   },
+  stores: {
+    googlePlay: "https://play.google.com/store/apps/details?id=link.tetherly",
+  },
   company: "DataHase Dev Private Limited",
   country: "India",
   email: {
