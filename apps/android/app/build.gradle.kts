@@ -60,6 +60,8 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.12.4")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.10.0")
     implementation("com.google.android.gms:play-services-code-scanner:16.1.0")
+    // The code scanner pulls in fragment 1.0.0, which Play Console flags as outdated.
+    implementation("androidx.fragment:fragment:1.9.1")
     debugImplementation("androidx.compose.ui:ui-tooling")
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
