@@ -11,6 +11,7 @@ export const site = {
   },
   stores: {
     googlePlay: "https://play.google.com/store/apps/details?id=link.tetherly",
+    appStore: "https://apps.apple.com/app/tetherly-remote-desktop-app/id6821378175",
   },
   company: "DataHase Dev Private Limited",
   country: "India",
